@@ -1,24 +1,25 @@
 \documentclass{article}
-
 \makeatletter
 \renewcommand{\fnum@figure}{Εικόνα \thefigure}
 \makeatother
-
 \usepackage[greek, english]{babel}
 \usepackage{alphabeta}
 \usepackage{atbegshi, picture}
-
-% Set page size and margins
-% Replace `letterpaper' with`a4paper' for UK/EU standard size
 \usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
-
-% Useful packages
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage{indentfirst}
-\usepackage{hyperref}
+\usepackage[table]{xcolor}
+\usepackage{hyperref} 
+ \hypersetup{ 
+     colorlinks=true, 
+     linkcolor=blue, 
+     filecolor=blue, 
+     citecolor = black,       
+     urlcolor=black, 
+     } 
 
 \addto\captionsenglish{
   \renewcommand{\contentsname}
@@ -31,25 +32,25 @@
    \begin{center}
        \vspace*{1cm}
 
-       \textbf{\huge Team plan v0.1}
+       \textbf{\huge Team Plan}
 
        \vspace{0.5cm}
         Τεχνολογία Λογισμικού
             
        \vspace{1cm}
 
-       \textbf{Κούρου Αγγελική}
+       \textbf{Κούρου Αγγελική\\Βλαχογιάννης Δημήτρης}
        
        \begin{figure}[!htb]
         \centering
-        \includegraphics[width=0.5\textwidth]{logo.png}
+        \includegraphics[width=0.5\textwidth]{905e4125666e44b594d9bd286a1d1b61.png}
         \end{figure}
         
         \vspace{0.5cm}
         
         \begin{figure}[!htb]
         \centering
-        \includegraphics[width=0.5\textwidth]{ceid.png}
+        \includegraphics[width=0.5\textwidth]{up_2017_logo_en.jpg}
         \end{figure}
 
 
@@ -59,7 +60,7 @@
             
        \vspace{0.5cm}
             
-        \href{http://www.ceid.upatras.gr}{CEID}, \href{http://www.ece.upatras.gr}{ECE} \\
+        CEID, ECE \\
        University of Patras\\
             
    \end{center}
@@ -82,135 +83,142 @@
   \tableofcontents
 }
 
-
-\newpage
-
-
 \section{Εισαγωγή}
    
-
- Το παρόν τεχνικό κείμενο αποτελεί τον τρόπο χειρισμού της υποχρεωτικής εργασίας στο μάθημα "Τεχνολογία Λογισμικού", άρα και την υλοποίηση του project \textbf{Medic World}. Παρακάτω θα αναλυθούν οι τρόποι και τα εργαλεία υλοποίησης της εργασίας καθώς και θα δοθούν τα διαγράμματα Gannt και Pert που αφορούν τον χρονοπρογραμματισμό της εργασίας. Κρίνεται σημαντικό να αναφερθεί πώς οι ημερομηνίες που εμφανίζονται τα διαγράμματα, αφορούν δικιές μας χρονικές εκτιμήσεις, οι οποίες αργότερα μπορεί να αλλάξουν. Οι αλλαγές θα καταγραφούν σε επόμενες εκδόσεις του τεχνικού κειμένου. 
+Στο παρόν τεχνικό κείμενο παρουσιάζεται ο τρόπος χειρισμού του έργου \textbf{Medic World} στο πλαίσιο του μαθήματος "Τεχνολογία Λογισμικού". Αρχικά θα δοθεί μια σύντομη επισκόπηση της ομάδας και στη συνέχεια θα αναλυθούν οι τρόποι και τα εργαλεία υλοποίησης της εργασίας καθώς και θα δοθούν τα διαγράμματα Gannt και Pert που αφορούν τον χρονοπρογραμματισμό της. 
  
  
 \subsection{Ομάδα Υλοποίησης}
 
-Η ομάδα μας αποτελείται από τα 5 άτομα που αναγράφονται παραπάνω. Μετά από σύσταση των διδασκόντων επιλέξαμε να γίνουμε μία μεικτή ομάδα συμπεριλαμβάνοντας τον Δημήτρη Βεργίνη, από το ΤΜΗΜΤΥ, τον οποίο γνωρίζουμε ως καλό developer λογισμικού στην γλώσσα που επιλέξαμε να γράψουμε τον κώδικα. Επίσης η μεταξύ μας επιθυμία για συνεργασία προέκυψε από τα εξής χαρακτηριστικά των ατόμων:
- 
+Για την σύσταση της ομάδας επιλέχθηκαν τα παραπάνω πέντε άτομα λαμβάνοντας υπόψιν τις δυνατότητες του καθενός και με ποιον τρόπο αυτές μπορούν να συνεισφέρουν σε μια ομάλη συνεργασία και στην ολοκλήρωση του έργου μας. Ξεκινώντας με τον Project Manager, Στεφανίδη Μάριο, ο οποίος με την οργανωτικότητα, τη σχολαστικότητα και τη συνέπειά του βοηθάει στον καλύτερο συντονισμό και την αποτελεσματική λειτουργία της ομάδας. Ως Quality Manager ορίστηκε η Μητροπούλου Αικατερίνα , η οποία ούσα ένα εργατικό, υπομονετικό και επικοινωνιακό άτομο διαχειρίζεται την εικόνα των εργασιών με σεβασμό απέναντι στους δημιουργούς τους.
+\newline \par
 
-\begin{itemize}
-  \item Καλός χρονοπρογραμματιστής, Οργανωτικός developer : Μάριος Στεφανίδης
-  \item Εργατική, Γνώστης διαδραστικών τεχνολογιών : Αικατερίνα Μητροπούλου
-  \item Έμπειρος developer, Γνώστης Python(αντικειμενοστραφούς προγραμματισμού) : Δημήτριος Βεργίνης
-  \item Ευπροσάρμοστος στο Λογισμικό, Συγκεντρωτικές γνώσεις αντικειμενοστρέφειας : Δημήτριος Βλαχογιάννης
-  \item Εργατική, Γνώστης αναγκών υλικού, Γνώσεις αντικειμενοστραφούς προγραμματισμού : Αγγελική Κούρου 
-\end{itemize}
+Όσον αφορά στα Hard Skills της ομάδας φροντίσαμε τα μέλη που την απαρτίζουν να προσφέρουν το καθένα και κάτι διαφορετικό. Ο Βεργίνης Δημήτριος, θεωρούμε ότι θα διαδραματίσει σημαντικό ρόλο στην ανάπτυξη του κώδικα του \textbf{Medic World} με τις γνώσεις που διαθέτει στη γλώσσα \emph{Python}, ενώ παράλληλα φέρνει μια νέα οπτική εξαιτίας των σπουδών του στο τΗΜΤΥ. Ο Βλαχογιάννης Δημήτριος, έχοντας πολύπλευρες γνώσεις στο κομμάτι του προγραμματισμού καθώς και εφευρετικότητα παρέχει γρήγορα λύσεις στα πιθανά προβλήματα που θα προκύψουν. Η Κούρου Αγγελική έχοντας ακολουθήσει μία κατεύθυνση υλικού στις σπουδές της, θα διαχειριστεί τον κώδικα έχοντας ως γνώμονα την καλύτερη δυνατή αξιοποίηση των πόρων των συστημάτων με απώτερο στόχο τη λειτουργία του \textbf{Medic World} στο μέγιστο των δυνατοτήτων του. Τέλος, ανεξάρτητα από τις προγραμματιστικές τους γνώσεις, ο Στεφανίδης Μάριος και η Μητροπούλου Αικατερίνα, είναι εξοικειωμένοι με τους κανόνες του UX Design.
 
 
 \subsection{Εργαλεία Υλοποίησης}
 
-Έχουμε επιλέξει διάφορα εργαλεία και εφαρμογές για την υλοποίηση της εν λόγω εργασίας. Παρακάτω αναλύονται οι ανάγκες που πρέπει να καλυφθούν και ποιές εφαρμογές επιλέχθηκαν.
+Για την υλοποίηση των επιμέρους διεργασιών του \textbf{Medic World} χρησιμοποιήθηκε μια πληθώρα εργαλείων όπως φαίνεται παρακάτω.
 
 
 \begin{itemize}
-    \item Προγραμματισμός σε Puthon : Pycharm, Vscode
-    \item Διαγράμματα Gannt : \href{https://www.monday.com}{Monday}
-    \item Διαγράμματα Pert : \href{https://lucid.app}{Lucidchart}
-    \item Επεξεργασία Τεχνικών Κειμένων : \href{https://www.overleaf.com}{Overleaf}
-    \item Mock-up Screens : \href{https://www.mockflow.com/}{Mockflow}, \href{https://www.figma.com}{Figma}
-    \item Αποθήκευση, Επεξεργασία Τεχνικών Κειμένων : \href{https://github.com/}{Github}
+    \item Γλώσσες Προγραμματισμού: Python, SQL
+    \item Περιβάλλοντα Ανάπτυξης: PyCharm, Visual Studio Code, MariaDB
+    \item Πλατφόρμες Επικοινωνίας: Discord, Githhub (Issues \& Commits), e-mail
+    \item Διαγράμματα Gantt: \underline{\href{https://www.monday.com}{Monday}}
+    \item Διαγράμματα Pert,ER: \underline{\href{https://lucid.app}{Lucidchart}}
+    \item Επεξεργασία Τεχνικών Κειμένων: \underline{\href{https://www.overleaf.com}{Overleaf}}
+    \item Mock-up Screens: \underline{\href{https://www.figma.com}{Figma}}
+    \item Version Control: \underline{\href{https://github.com/}{Github}}
+    \item Database Design: \underline{\href{www.dbdesigner.net}{DBDesigner}}
 \end{itemize}
  
 
 \subsection{Μέθοδος Ανάπτυξης Λογισμικού}
 
-Ύστερα από συγκεντρωτική ψηφοφορία, επιλέχθηκε η μέθοδος ανάπτυξης λογισμικού \textbf{Scrum} για την υλοποίηση αυτής της εργασίας. Θεωρήθηκε ταιριαστή αυτή η μέθοδος για διάφορους λόγους. Πρώτον, στα πλαίσια ενός εξαμήνου, για να ολοκληρωθούν 6 παραδοτέα θα χρειαστούν sprint cycles για την ολοκλήρωση του project. Στο τέλος κάθε κύκλου εργασίας, θα αξιολογείται η πρόοδος της ομάδας από τους "πελάτες" (διδάσκοντες). Δεύτερον, με πλήθος 5 ατόμων σε μία ομάδα χρειάζεται ο ηγετικός ρόλος του \textbf{Scrum Master} ή \textbf{Project Manager} για να οργανώσει την δουλειά και να ελέγξει τα μέλη. Ακόμα το γεγονός πως η ομάδα παρουσιάζει ετερογένεια, όσον αφορά την σχολή φοίτησης και υπάρχουν διαφορές στις ώρες εργασίας, συνιστά έναν ακόμα λόγο να υπάρχει κάποιος υπεύθυνος που θα συνεννοείται με όλους τους developers ώστε να έρθει η εργασία είς πέρας. Έτσι επιλέχθηκε το \textbf{Scrum} ως ιδανικός τρόπος ανάπτυξης λογισμικού.
-
-\newpage
+Ύστερα από συγκεντρωτική ψηφοφορία, επιλέχθηκε η μέθοδος ανάπτυξης λογισμικού \textbf{Scrum} για την υλοποίηση αυτού του έργου. Θεωρήθηκε κατάλληλη η παραπάνω μέθοδος για διάφορους λόγους. Πρώτον, στα πλαίσια ενός εξαμήνου, για να ολοκληρωθούν 6 παραδοτέα θα χρειαστούν sprint cycles για την ολοκλήρωση του project. Στο τέλος κάθε κύκλου εργασίας, θα αξιολογείται η πρόοδος της ομάδας από τους "πελάτες" (διδάσκοντες). Δεύτερον, λόγω του μεγέθους της ομάδας, κρίνεται απαραίτητος ο ηγετικός ρόλος του \textbf{Scrum Master} ή \textbf{Project Manager}, για να οργανώσει τις επιμέρους εργασίες και τα μέλη. Ακόμα, το γεγονός πως η ομάδα παρουσιάζει ετερογένεια, όσον αφορά στις ακαδημαϊκές σπουδές και στις διαφορές των εβδομαδιαίων προγραμμάτων του κάθε μέλους, συνιστά έναν ακόμη λόγο να υπάρχει κάποιος υπεύθυνος που θα συνεννοείται με όλους τους developers, ώστε να ολοκληρώνονται με επιτυχία τα διάφορα tasks. Λαμβάνοντας, λοιπόν, υπόψιν τα παραπάνω, επιλέχθηκε το \textbf{Scrum} ως ιδανικός τρόπος ανάπτυξης λογισμικού.
 
 \section{Διαγράμματα χρονοπρογραμματισμού}
 
-
+Παρακάτω παρουσιάζονται τα διαγράμματα χρονοπρογραμματισμού Gantt και Pert Charts.
 
 \subsection{Διαγράμματα Gannt}
 
-Τα παρακάτω διαγράμματα χρονοπρογραμματισμού δημιουργήθηκαν βάσει των ζητούμενων παραδοτέων τεχνικών κειμένων, με προσωπική εκτίμηση της χρονικής διάρκειας κάθε παραδοτέου. Έγιναν με την βοήθεια του online εργαλείου \href{https://www.monday.com}{Monday}
+Τα παρακάτω διαγράμματα χρονοπρογραμματισμού δημιουργήθηκαν σύμφωνα με τις οδηγίες και τα χρονικά περιθώρια που δόθηκαν από τους διδάσκοντες του μαθήματος.
 
 \vspace{0.3cm}
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.9\textwidth]{Team-plan-Gannt-1.jpg}
-\caption{\label{fig:log in page} Παραδοτέα 1, 2}
+\includegraphics[width=0.9\textwidth]{Gantt1.png}
+\caption{\label{fig:Gantt1} Παραδοτέο 1$^o$}
 \end{figure}
- 
+
+\newpage
  
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=1.0\textwidth]{Team-plan-Gannt-2.jpg}
-\caption{\label{fig:log in page} Παραδοτέα 3, 4}
+\includegraphics[width=1.0\textwidth]{Gantt2.png}
+\caption{\label{fig:Gantt2} Παραδοτέo 2$^o$}
 \end{figure}
-
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=1.0\textwidth]{Team-plan-Gannt-3.jpg}
-\caption{\label{fig:log in page} Παραδοτέα 5, 6}
+\includegraphics[width=1.0\textwidth]{Gantt3.png}
+\caption{\label{fig:Gannt3} Παραδοτέo 3$^o$}
 \end{figure}
 
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=1.0\textwidth]{Gantt4.png}
+\caption{\label{fig:Gannt4} Παραδοτέo 4$^o$}
+\end{figure}
+
+\newpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=1.0\textwidth]{Gantt5.png}
+\caption{\label{fig:Gannt5} Παραδοτέo 5$^o$}
+\end{figure}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=1.0\textwidth]{Gantt6.png}
+\caption{\label{fig:Gannt6} Παραδοτέo 6$^o$}
+\end{figure}
 
 
 \subsection{Διαγράμματα Pert}
-Τα Pert flowcharts που αφορούν τα παραδοτέα της εργασίας, ξανά με προσωπική εκτίμηση των χρονικών περιόδων είναι παρουσιασμένα παρακάτω. Έγιναν με την βοήθεια του online εργαλείου \href{https://lucid.app}{Lucidchart}. Για περαιτέρω βοήθεια στην κατανόηση πρέπει να γίνουν οι εξής διευκρινίσεις:
+
+Τα Pert flowcharts που αφορούν τα παραδοτέα της εργασίας παρουσιάζονται παρακάτω. Για περαιτέρω βοήθεια στην κατανόηση πρέπει να γίνουν οι εξής διευκρινίσεις:
 
 \begin{itemize}
-  \item Με μαύρο βελος συμβολίζονται τα τεχνικά κείμενα που θα μπορούσαν να συγγραφούν παράλληλα και δεν σχετίζονται αυστηρά ώστε η συγγραφή του ενός να είναι μη πραγματοποιήσιμη χωρίς το άλλο.
-  \item Με κόκκινο βέλος συμβολίζονται είτε τα υποχρεωτικά παραδοτέα κάθε εργασίας, είτε η σύνδεση έκδοσης ενός τεχνικού κειμένου με ένα άλλο κείμενο παραδοθέν σε προηγούμενη έκδοση της εργασίας.
+  \item Με κόκκινο βέλος συμβολίζεται το κρίσιμο μονοπάτι του έργου, οποιαδήποτε καθυστέρηση του οποίου θα οδηγήσει σε καθυστέρηση όλου του έργου
   \item Οι κίτρινοι ρόμβοι συμβολίζουν τα milestones, επομένως στην προκειμένη περίπτωση τις ολοκληρωμένες παραδόσεις της εργασίας.
 \end{itemize}
 
-Σημαντικό κρίνεται επίσης να σημειωθεί, ότι στο τελευταίο διάγραμμα για να αποφυγεί η δυσκολία κατανόησης με ένα milestone έχουν αποτυπωθεί και οι 5 προηγούμενες επιτυχημένες παραδόσεις του project ως ένα milestone. Συγκεντρωτικά οι 5 προηγούμενες εκδόσεις της εργασίας αποτελούν ένα milestone για την τελική μορφή της εργασίας.
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=1\textwidth]{Pert1.png}
+\caption{\label{fig:Pert1} Παραδοτέο 1$^o$}
+\end{figure}
 
 \newpage
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.6\textwidth]{Team-plan-Pert-1.png}
-\caption{\label{fig:log in page}Διάγραμμα Pert  1}
-\end{figure}
- 
- 
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=0.6\textwidth]{Team-plan-Pert-2.png}
-\caption{\label{fig:log in page}Διάγραμμα Pert  2}
-\end{figure}
-
-
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=0.6\textwidth]{Team-plan-Pert-3.png}
-\caption{\label{fig:log in page}Διάγραμμα Pert  3}
+\includegraphics[width=1\textwidth]{Pert2.png}
+\caption{\label{fig:Pert2} Παραδοτέο 2$^o$}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.8\textwidth]{Team-plan-Pert-4.png}
-\caption{\label{fig:log in page}Διάγραμμα Pert  4}
+\includegraphics[width=1\textwidth]{Pert3.png}
+\caption{\label{fig:Pert3} Παραδοτέο 3$^o$}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.8\textwidth]{Team-plan-Pert-5.png}
-\caption{\label{fig:log in page}Διάγραμμα Pert  5}
+\includegraphics[width=1\textwidth]{Pert4.png}
+\caption{\label{fig:Pert4} Παραδοτέο 4$^o$}
 \end{figure}
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=0.8\textwidth]{Team-plan-Pert-6.png}
-\caption{\label{fig:log in page}Διάγραμμα Pert 6}
-\end{figure}
-
 
 \newpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=1\textwidth]{Pert5.png}
+\caption{\label{fig:Pert5} Παραδοτέο 5$^o$}
+\end{figure}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=1\textwidth]{Pert6.png}
+\caption{\label{fig:Pert6} Παραδοτέο 6$^o$}
+\end{figure}
+
+
 
 
 \end{document}

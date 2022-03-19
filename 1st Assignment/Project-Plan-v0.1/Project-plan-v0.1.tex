@@ -1,0 +1,277 @@
+\documentclass{article}
+
+\makeatletter
+\renewcommand{\fnum@figure}{Εικόνα \thefigure}
+\makeatother
+
+\usepackage[greek, english]{babel}
+\usepackage{alphabeta}
+\usepackage{atbegshi, picture}
+
+% Set page size and margins
+% Replace letterpaper' witha4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} 
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{hyperref} 
+ \hypersetup{ 
+     colorlinks=true, 
+     linkcolor=blue, 
+     filecolor=blue, 
+     citecolor = black,       
+     urlcolor=black, 
+     } 
+
+\addto\captionsenglish{
+  \renewcommand{\contentsname}
+    {Περιεχόμενα}
+}
+
+% \title{Feasibility Study}
+% \date{}
+
+\begin{document}
+% \maketitle
+
+\begin{titlepage}
+   \begin{center}
+       \vspace*{1cm}
+
+       \textbf{\huge Project Plan}
+
+       \vspace{0.5cm}
+        Τεχνολογία Λογισμικού
+            
+       \vspace{1cm}
+
+       \textbf{Βλαχογιάννης Δημήτριος\\ Κούρου Αγγελική}
+       
+       
+       \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=0.5\textwidth]{905e4125666e44b594d9bd286a1d1b61.png}
+        \end{figure}
+        
+        \vspace{0.5cm}
+        
+        \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=0.5\textwidth]{up_2017_logo_en.jpg}
+        \end{figure}
+
+
+       \vfill
+            
+       Τεχνικό Κείμενο για την Τεχνολογία Λογισμικού\\
+            
+       \vspace{0.5cm}
+            
+       CEID, ECE\\
+       University of Patras\\
+            
+   \end{center}
+\end{titlepage}
+
+
+
+\noindent Η ομάδα μας
+
+\begin{enumerate}
+  \item Βεργίνης Δημήτριος, ΑΜ: 10166634 , ECE
+  \item Βλαχογιάννης Δημήτριος, ΑΜ: 1067371, CEID
+  \item Κούρου Αγγελική, ΑΜ: 1067499 , CEID
+  \item Μητροπούλου Αικατερίνα - Quality Manager, ΑΜ: 1067409, CEID
+  \item Στεφανίδης Μάριος - Project Manager, ΑΜ:1067458, CEID
+\end{enumerate}
+
+{
+  \hypersetup{linkcolor=black}
+  \tableofcontents
+}
+
+\section{Εισαγωγή}
+Κάνουμε την παραδοχή ότι η ομάδα μας αποτελείται από άτομα που έχουν ήδη μια εργασιακή απασχόληση στο χώρο της ανάπτυξης λογισμικού και τους έχει ανατεθεί η υλοποίηση μίας εφαρμογής για την βελτίωση της οργάνωσης ενός νοσοκομειακόυ περιβάλλοντος.\\ \\
+\textbf{Σημείωση:} Όλο το κείμενο που αναπτύσσεται παρακάτω θα συνταχθεί από την οπτική μιας τέτοιας ομάδας.\\
+
+\subsection{Ομάδα Υλοποίησης}
+Έχοντας μόλις αποφοιτήσει η ομάδα προσεγγίζεται από μια νοσοκομειακή μονάδα για την ανάπτυξη ενός λογισμικού για τον πιο εύρυθμο συντονισμό του. Από την ομάδα επιλέχθηκε ομόφωνα για το ρόλο του Project Manager ο Στεφανίδης Μάριος.\\
+
+\textbf{Σημείωση:} Οι παρακάτω ρόλοι δεν αντιστοιχούν στην πραγματική τους έννοια αλλά δίνονται με βάση τις γνώσεις και την εμπειρία του κάθε ατόμου στον τομέα του.
+\begin{enumerate}
+    \item Βεργίνης Δημήτριος: \emph{Senior Developer}
+    \item Βλαχογιάννης Δημήτριος: \emph{Senior Developer}
+    \item Κούρου Αγγελική: \emph{Middle Developer}
+    \item Μητροπούλου Αικατέρινα: \emph{UX Designer, Middle Developer}
+    \item Στεφανίδης Μάριος: \emph{UX Designer, Senior Developer}
+\end{enumerate}
+
+\subsection{Εργαλεία Υλοποίησης}
+
+\begin{itemize}
+    \item Γλώσσες Προγραμματισμού: Python, SQL
+    \item Περιβάλλοντα Ανάπτυξης: PyCharm, Visual Studio Code, MariaDB
+    \item Deployment Platform: Docker
+    \item Πλατφόρμες Επικοινωνίας: Discord, Github (Issues,Commits), e-mail
+    \item Διαγράμματα Gantt: \underline{\href{www.monday.com}{Monday}}
+    \item Διαγράμματα Pert, ER : \underline{\href{www.lucid.app}{Lucidchart}}
+    \item Επεξεργασία Τεχνικών Κειμένων: \underline{\href{www.overfleaf.com}{Overleaf}}
+    \item Mock-up Screens: \underline{\href{www.figma.com}{Figma}}
+    \item Version Control: \underline{\href{www.github.com}{Github}}
+    \item Database Design: \underline{\href{www.dbdesigner.net}{DBDesigner}}
+    % Ίσως μπει trello για Kanban
+\end{itemize}
+
+\section{Ανάθεση Εργασιών}
+Οι εργασίες θα κατανεμηθούν με βάση τα σημεία που το κάθε μέλος της ομάδας υπερτερεί. Ύστερα από συνάντηση του Project Team οι αρμοδιότητα χωρίζονται ως εξής:
+
+\begin{itemize}
+    \item UX/UI Design: Μητροπούλου Αικατερίνα, Στεφανίδης Μάριος
+    \item Front-end Developers: Κούρου Αγγελική, Μητροπούλου Αικατερίνα, Στεφανίδης Μάριος
+    \item Back-end Developers: Βεργίνης Δημήτριος, Βλαχογιάννης Δημήτριος
+    \item Database Design: Βεργίνης Δημήτριος, Βλαχογιάννης Δημήτριος
+    \item Υπεύθυνος Χρονοπρογραμματισμού: Στεφανίδης Μάριος
+    \item Alpha Testing: Βλαχογιάννης Δημήτριος, Κούρου Αγγελική, Μητροπούλου Αικατερίνα
+    \item Quality Assurance: Μητροπούλου Αικατερίνα, Στεφανίδης Μάριος
+    \item Υπεύθυνοι Επικοινωνίας (με τον πελάτη): Βεργίνης Δημήτριος, Κούρου Αγγελική 
+\end{itemize}
+
+\section{Κόστος Υλοποίησης}
+Οι υπολογισμοί για το κόστος θα γίνουν με γνώμονα ότι το έργο θα έχει υλοποιηθεί στα επόμενα τρία χρόνια.
+
+\subsection{Άμεσο Κόστος}
+Μηνιαίες αποδοχές ομάδας:
+
+ \begin{center}
+     \begin{tabular}{|l|l|}
+     \hline
+      \textbf{Μέλος}   & \textbf{Ποσό} \T\B \\ 
+      \hline
+      Στεφανίδης Μάριος & 950\texteuro \T\B \\
+      \hline
+      Μητροπούλου Αικατερίνα& 850\texteuro \T\B \\
+      \hline
+      Βεργίνης Δημήτριος & 800\texteuro \T\B \\
+      \hline
+      Κούρου Αγγελική & 800\texteuro \T\B \\
+      \hline
+      Βλαχογιάννης Δημήτριος & 800\texteuro \T\B \\
+      \hline
+     \end{tabular}
+ \end{center}
+ \vspace{0.3cm}
+Με βάση τον παρακάνω πίνακα προκύπτει ένα κόστος τριετίας {152.280,00\texteuro} για τη μισθοδοσία της ομάδας.
+
+\subsection{Έμμεσο Κόστος}
+ \begin{center}
+     \begin{tabular}{|l|l|}
+     \hline
+      \textbf{Εφαρμογή}   & \textbf{Ποσό/Μήνα} \T\B \\ 
+      \hline
+      PyCharm & 21\texteuro \T\B \\
+      \hline
+      Monday & 45\texteuro \T\B \\
+      \hline
+      Lucidchart & 22\texteuro \T\B \\
+      \hline
+      Figma & 22\texteuro \T\B \\
+      \hline
+      Github Pro & 180\texteuro \T\B \\
+      \hline
+      DBDesigner & 30\texteuro \T\B \\
+      \hline
+     \end{tabular}
+ \end{center}
+
+\vspace{0.3cm}
+     
+Τα παραπάνω προγράμματα μαζί με τα κόστη τους αποτελούν τα επαγγελματικά εργαλεία που θα χρησιμοποιήσει η ομάδα μας προκειμένου να  αναπτύξει το \textbf{Medic World}. Ως ομάδα δεν απαιτούμε από τον πελάτη να εξασφαλίσει πλήρως τα κόστη αυτών των προγραμμάτων αλλά ένα ποσοστό της τάξεως του 15\%, το οποίο είναι σε βάθος τριετίας {1730\texteuro}.
+
+\section{Διαγράμματα Χρονοπρογραμματισμού}
+
+\subsection{Διαγράμματα Gantt}
+
+Παρακάτω παρουσιάζονται τα διαγράμματα χρονοπρογραμματισμού που αφορούν την εξέλιξη του \textbf{Medic World}.
+
+\vspace{0.3cm}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=1\textwidth]{Gantt_Project_Plan_1.png}
+\caption{\label{fig:Pert4} 01/03/2022 - 07/10/2023}
+\end{figure}
+
+\vspace{0.3cm}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=1\textwidth]{Gant_Project_Plan_2.png}
+\caption{\label{fig:Pert4} 08/10/2023 - 11/03/2025}
+\end{figure}
+\vspace{0.5cm}
+
+\subsection{Διαγράμματα Pert}
+
+Παρακάτω παρουσιάζονται τα Pert flowcharts που δημιουργήθηκαν με σκοπό την καλύτερη οργάνωση και συντονισμό των υποέργων/tasks του \textbf{Medic World}. Για περαιτέρω βοήθεια στην κατανόηση πρέπει να γίνουν οι εξής διευκρινίσεις:
+
+\begin{itemize}
+  \item Με κόκκινο βέλος συμβολίζεται το κρίσιμο μονοπάτι του έργου, οποιαδήποτε καθυστέρηση του οποίου θα οδηγήσει σε καθυστέρηση όλου του έργου
+  \item Οι κίτρινοι ρόμβοι συμβολίζουν τα milestones του έργου.
+\end{itemize}
+
+\subsection{1$^o$ Milestone}
+
+Επικοινωνία με τον πελάτη, παρουσίαση του prototype, συζήτηση για έγκριση και συνέχεια.
+
+\vspace{0.3cm}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=1\textwidth]{Pert_1I.png}
+\caption{\label{fig:Pert1} 1$^o$ Milestone}
+\end{figure}
+
+\newpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=1\textwidth]{Pert_1II.png}
+\caption{\label{fig:Pert2} 1$^o$ Milestone}
+\end{figure}
+
+\subsection{2$^o$ Milestone}
+
+Πρώτη έκδοση του \textbf{Medic World} και παρουσίαση στον πελάτη.
+
+\vspace{0.3cm}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=1\textwidth]{Pert_2.png}
+\caption{\label{fig:Pert3} 2$^o$ Milestone}
+\end{figure}
+
+\newpage
+
+\subsection{3$^o$ Milestone}
+
+Τελική παράδοση και έκδοση του \textbf{Medic World} μετά την διαδικασιά ελέγχου.
+
+\vspace{0.3cm}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=1\textwidth]{Pert_3.png}
+\caption{\label{fig:Pert4} 3$^o$ Milestone}
+\end{figure}
+
+\vspace{0.5cm}
+
+\textbf{Σημείωση:} Επικοινωνία με τον πελάτη θα διεξάγεται καθόλη την διάρκεια εκπόνησης του έργου και όχι μόνο κατά τις ημερομηνίες των milestones.
+
+\end{document}

@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>logo.png</file>
+    <file>iPad Status bar.png</file>
+    <file>vector.png</file>
+  </qresource>
+</RCC>

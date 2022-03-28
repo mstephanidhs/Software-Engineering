@@ -13,23 +13,29 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_Form(object):
     def setupUi(self, Form):
+    
         Form.setObjectName("Form")
         Form.resize(1366, 1024)
         Form.setStyleSheet("background-color: rgba(255, 255, 255);")
+        
+        # Ipad Status Bar
         self.statusbar = QtWidgets.QLabel(Form)
         self.statusbar.setGeometry(QtCore.QRect(0, 0, 1368, 22))
         self.statusbar.setStyleSheet("background-image: url(:/newPrefix/iPad Status bar.png);")
         self.statusbar.setText("")
         self.statusbar.setObjectName("statusbar")
+        
         self.bluebackground = QtWidgets.QWidget(Form)
         self.bluebackground.setGeometry(QtCore.QRect(20, 30, 1366, 1002))
         self.bluebackground.setStyleSheet("background-color:rgb(30, 47, 151);")
         self.bluebackground.setObjectName("bluebackground")
+        
         self.whitebackground = QtWidgets.QWidget(self.bluebackground)
         self.whitebackground.setGeometry(QtCore.QRect(160, 120, 866, 776))
-        self.whitebackground.setStyleSheet("background-color: rgba(255, 255, 255);\n"
-"border-radius: 100px")
+        self.whitebackground.setStyleSheet("background-color: rgba(255, 255, 255);\n""border-radius: 100px")
         self.whitebackground.setObjectName("whitebackground")
+        
+        # Welcome Back Text
         self.welcomeback = QtWidgets.QLabel(self.whitebackground)
         self.welcomeback.setGeometry(QtCore.QRect(100, 20, 480, 174))
         font = QtGui.QFont()
@@ -38,6 +44,8 @@ class Ui_Form(object):
         self.welcomeback.setFont(font)
         self.welcomeback.setStyleSheet("color:rgb(30, 47, 151);")
         self.welcomeback.setObjectName("welcomeback")
+        
+        # LOGIN Text
         self.login = QtWidgets.QLabel(self.whitebackground)
         self.login.setGeometry(QtCore.QRect(100, 170, 294, 53))
         font = QtGui.QFont()
@@ -46,31 +54,31 @@ class Ui_Form(object):
         self.login.setFont(font)
         self.login.setStyleSheet("color:rgb(210, 20, 4)")
         self.login.setObjectName("login")
+        
+        # Fill in User Name
         self.username = QtWidgets.QLineEdit(self.whitebackground)
         self.username.setGeometry(QtCore.QRect(100, 280, 588, 110))
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(14)
         self.username.setFont(font)
-        self.username.setStyleSheet("background-color: rgba(0, 0, 0, 0);\n"
-"border: none;\n"
-"border-bottom: 2px solid rgb(30, 47, 151);\n"
-"color: rgba(0, 0, 0, 240);\n"
-"padding-bottom: 7px;")
+        self.username.setStyleSheet("background-color: rgba(0, 0, 0, 0);\n""border: none;\n""border-bottom: 2px solid rgb(30, 47, 151);\n"
+"color: rgba(0, 0, 0, 240);\n""padding-bottom: 7px;")
         self.username.setObjectName("username")
+        
+        # Fill in Password
         self.password = QtWidgets.QLineEdit(self.whitebackground)
         self.password.setGeometry(QtCore.QRect(100, 430, 588, 110))
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(14)
         self.password.setFont(font)
-        self.password.setStyleSheet("background-color: rgba(0, 0, 0, 0);\n"
-"border: none;\n"
-"border-bottom: 2px solid rgb(30, 47, 151);\n"
-"color: rgba(0, 0, 0, 240);\n"
-"padding-bottom: 7px;")
+        self.password.setStyleSheet("background-color: rgba(0, 0, 0, 0);\n""border: none;\n""border-bottom: 2px solid rgb(30, 47, 151);\n"
+"color: rgba(0, 0, 0, 240);\n""padding-bottom: 7px;")
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.password.setObjectName("password")
+        
+        # Forgot your Password? Button
         self.forgotpassword = QtWidgets.QPushButton(self.whitebackground)
         self.forgotpassword.setGeometry(QtCore.QRect(100, 630, 281, 54))
         font = QtGui.QFont()
@@ -78,6 +86,8 @@ class Ui_Form(object):
         font.setPointSize(20)
         self.forgotpassword.setFont(font)
         self.forgotpassword.setObjectName("forgotpassword")
+        
+        # Login Button
         self.loginbutton = QtWidgets.QPushButton(self.whitebackground)
         self.loginbutton.setGeometry(QtCore.QRect(450, 610, 235, 101))
         font = QtGui.QFont()
@@ -86,20 +96,20 @@ class Ui_Form(object):
         font.setBold(True)
         font.setWeight(75)
         self.loginbutton.setFont(font)
-        self.loginbutton.setStyleSheet("background-color: rgb(30, 47, 151);\n"
-"border-radius: 30px;\n"
-"color: rgba(255, 255, 255);\n"
-"")
+        self.loginbutton.setStyleSheet("background-color: rgb(30, 47, 151);\n""border-radius: 30px;\n""color: rgba(255, 255, 255);\n""")
         self.loginbutton.setObjectName("loginbutton")
+        
+        # Medic World Icon
         self.medicworld = QtWidgets.QLabel(self.whitebackground)
         self.medicworld.setGeometry(QtCore.QRect(550, 80, 201, 211))
         self.medicworld.setStyleSheet("background-image: url(:/newPrefix/logo.png);")
         self.medicworld.setText("")
         self.medicworld.setObjectName("medicworld")
+        
+        # Fun Icon
         self.funicon = QtWidgets.QLabel(self.bluebackground)
         self.funicon.setGeometry(QtCore.QRect(1040, 740, 300, 286))
-        self.funicon.setStyleSheet("background-image: url(:/newPrefix/vector.png);\n"
-"background-color: none;")
+        self.funicon.setStyleSheet("background-image: url(:/newPrefix/vector.png);\n""background-color: none;")
         self.funicon.setText("")
         self.funicon.setObjectName("funicon")
 

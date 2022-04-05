@@ -125,4 +125,5 @@ class Ui_Form(object):
         self.password.setPlaceholderText(_translate("Form", "Password"))
         self.forgotpassword.setText(_translate("Form", "Forgot your Password?"))
         self.loginbutton.setText(_translate("Form", "LOGIN"))
-import test_rc
+
+import Login.loginResources

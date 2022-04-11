@@ -16,7 +16,7 @@ class Ui_Form(object):
     
         Form.setObjectName("Form")
         Form.resize(1366, 1024)
-        Form.setStyleSheet("background-color: rgba(255, 255, 255);")
+        Form.setStyleSheet("background-color: rgb(255, 255, 255);")
         
         # Ipad Status Bar
         self.statusbar = QtWidgets.QLabel(Form)
@@ -32,7 +32,7 @@ class Ui_Form(object):
         
         self.whitebackground = QtWidgets.QWidget(self.bluebackground)
         self.whitebackground.setGeometry(QtCore.QRect(160, 120, 866, 776))
-        self.whitebackground.setStyleSheet("background-color: rgba(255, 255, 255);\n""border-radius: 100px")
+        self.whitebackground.setStyleSheet("background-color: rgb(255, 255, 255);\n""border-radius: 100px")
         self.whitebackground.setObjectName("whitebackground")
         
         # Welcome Back Text
@@ -96,7 +96,7 @@ class Ui_Form(object):
         font.setBold(True)
         font.setWeight(75)
         self.loginbutton.setFont(font)
-        self.loginbutton.setStyleSheet("background-color: rgb(30, 47, 151);\n""border-radius: 30px;\n""color: rgba(255, 255, 255);\n""")
+        self.loginbutton.setStyleSheet("background-color: rgb(30, 47, 151);\n""border-radius: 30px;\n""color: rgb(255, 255, 255);\n""")
         self.loginbutton.setObjectName("loginbutton")
         
         # Medic World Icon
@@ -125,5 +125,6 @@ class Ui_Form(object):
         self.password.setPlaceholderText(_translate("Form", "Password"))
         self.forgotpassword.setText(_translate("Form", "Forgot your Password?"))
         self.loginbutton.setText(_translate("Form", "LOGIN"))
+
 
 import Login.loginResources

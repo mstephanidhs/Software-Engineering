@@ -4,3 +4,4 @@ class Laboratory:
         self.labID = ID
         self.name = name
         self.assignedLabPersonnel = []
+        self.isAvailable = True

@@ -5,5 +5,5 @@ class Department:
         self.name = name
         self.personnelCapacity = personnelCapacity
         self.numOfOffices = numberOfOffices
-        self.specialRoomList = []
+        self.operatingRooms = []
 

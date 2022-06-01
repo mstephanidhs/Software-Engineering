@@ -1,26 +1,16 @@
 from datetime import datetime
 from Model.HospitalStaffMember import  HospitalStaffMember
-
+import os
 class Post:
 
     def __init__(self, ID, subject, content, timestamp, contributor, image):
-        if not isinstance(int, ID):
-            raise TypeError
 
-        if not isinstance(str, subject):
-            raise TypeError
 
-        if not isinstance(str, content):
-            raise TypeError
+        if len(content) > 280:
+            raise Exception
 
-        if not isinstance(datetime, timestamp):
-            raise TypeError
-
-        if not isinstance(HospitalStaffMember, contributor):
-            raise TypeError
-
-        if not isinstance(bytearray, image):
-            raise TypeError
+        if os.path.getsize(image) > 60000000:
+            raise Exception
 
         self.postID = ID
         self.subject = subject

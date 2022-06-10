@@ -25,7 +25,7 @@ class SuppliesGui(object):
         self.suppliesLayout.setObjectName("suppliesLayout")
         self.categoriesLabel = QtWidgets.QLabel(Frame)
         self.categoriesLabel.setGeometry(QtCore.QRect(467, 24, 301, 61))
-        self.categoriesLabel.setStyleSheet("text-font: Roboto;\n"
+        self.categoriesLabel.setStyleSheet("font-family: Roboto;\n"
 "font-size:40px;\n"
 "font-weight:500;\n"
 "color:#1E2F97;\n"

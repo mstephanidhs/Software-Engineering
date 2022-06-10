@@ -24,6 +24,6 @@ class SuccessFrame(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def confirm(self):
         cat, name, quan, minn, med, low = self.values
-        newDrug = Drug(cat, name, quan, minn, med, low)
+        newDrug = Drug(cat, name, int(quan), int(minn), int(med), int(low))
         newDrug.store(self.connector)
         self.close()

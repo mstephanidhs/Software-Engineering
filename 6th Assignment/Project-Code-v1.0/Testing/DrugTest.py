@@ -2,7 +2,7 @@ import sqlite3
 import unittest
 from Model.ModelDB import ModelDB
 from Model.Drug import  Drug
-
+from MainApp.DBPATH import DBPATH
 
 class DrugTest(unittest.TestCase):
 
@@ -34,7 +34,7 @@ class DrugTest(unittest.TestCase):
         self.assertFalse(Drug.quantitiesCheck([123]))
 
     def test_store(self):
-        db =ModelDB('/home/dimitris/PycharmProjects/MedicWorld/Model/Medicine.sqlite3')
+        db =ModelDB(DBPATH)
         drug1 = Drug("Antibiotics", "Ponstan", 100, 100, 100, 100)
         drug2 = Drug("Antibiotics", "Ponstan", 500, 100, 100, 100)
         self.assertTrue(drug1.store(db))

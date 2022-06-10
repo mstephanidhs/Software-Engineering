@@ -3,7 +3,7 @@ import sys,os
 
 import  re
 from PyQt5 import QtWidgets
-
+from MainApp.DBPATH import DBPATH
 from StackedGUIS.DrugFormGUI import Ui_Frame
 from StackedGUIS.SuccessFrameGUI import  Ui_MainWindow
 from Model.Drug import  Drug
@@ -24,7 +24,7 @@ class NewDrugForm(QtWidgets.QFrame, Ui_Frame):
         self.backButton.clicked.connect(self.clearALL)
 
     def doneChecker(self, connector):
-        connector = ModelDB('/home/dimitris/PycharmProjects/MedicWorld/Model/Medicine.sqlite3')
+        connector = ModelDB(DBPATH)
         drugNames = connector.selectData("select name from Medicine")
         drugNames = [x[0] for x in drugNames ]
         name = self.editMap["name"].text()

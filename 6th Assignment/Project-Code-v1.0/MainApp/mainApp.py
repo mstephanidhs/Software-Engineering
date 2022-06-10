@@ -1,9 +1,11 @@
 import sys, os
 
-path = os.getcwd()
-parentPath = os.path.dirname(path) + "/Project-Code-v1.0"
-sys.path.insert(0, parentPath)
 
+
+path = os.getcwd()
+parent = os.path.abspath(os.path.join(path, os.pardir))
+sys.path.insert(0, parent)
+from DBPATH import  DBPATH
 from Login.loginUI import Ui_Form
 from MainGUI.medicWorldGUI import Ui_MainGUI
 from PatientForm.newPatientGUI import Ui_NewPatient
@@ -49,7 +51,7 @@ class MainPage(qtw.QWidget, Ui_MainGUI):
         self.stackedWidget.addWidget(self.settingsFrame)
         self.stackedWidget.addWidget(self.NewDrugForm)
         self.listWidget.currentRowChanged.connect(self.display)
-        self.databaseConnector = ModelDB('/home/dimitris/PycharmProjects/MedicWorld/Model/Medicine.sqlite3')
+        self.databaseConnector = ModelDB(DBPATH)
         self.connectButtons()
 
         # Initialize the login UIloginUI
@@ -109,7 +111,7 @@ class MainPage(qtw.QWidget, Ui_MainGUI):
         drugs = self.databaseConnector.selectData("select distinct category from Medicine")
         for drug in drugs:
             self.drugCategories.append(drug[0])
-        print(self.drugCategories)
+
         drugCol = [2, 4, 6]
         spacerCol = [1, 3, 5]
         self.SuppliesButtons = []

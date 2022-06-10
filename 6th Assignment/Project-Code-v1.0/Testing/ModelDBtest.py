@@ -2,14 +2,14 @@ import sqlite3
 import unittest
 from Model.ModelDB import ModelDB
 import PyQt5.QtWidgets as qtw
-
+from MainApp.DBPATH import  DBPATH
 app = qtw.QApplication([])
 
 
 class ModelDBTest(unittest.TestCase):
 
     def setUp(self):
-        self.db = ModelDB('/home/dimitris/PycharmProjects/MedicWorld/Model/Medicine.sqlite3')
+        self.db = ModelDB(DBPATH)
 
     def test_selectData(self):
         self.assertFalse(self.db.selectData("SELECT target from Medicine"))

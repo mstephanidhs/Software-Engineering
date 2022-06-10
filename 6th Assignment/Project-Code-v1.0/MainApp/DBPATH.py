@@ -1,5 +1,5 @@
 import os
-
+import re
 path = os.getcwd()
 parent = os.path.abspath(os.path.join(path, os.pardir))
 
@@ -7,4 +7,10 @@ dirs = []
 for root,dir,files in os.walk(parent):
     dirs.append(root)
 
-DBPATH = os.path.join(dirs[-2],"Medicine.sqlite3")
+pattern = re.compile(r"Model$")
+for i in dirs:
+   if pattern.search(i):
+       location = i
+
+
+DBPATH = os.path.join(location,"Medicine.sqlite3")

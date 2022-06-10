@@ -1,5 +1,9 @@
-import sys
-from functools import partial
+import sys, os
+
+path = os.getcwd()
+parentPath = os.path.dirname(path) + "/MedicWorld"
+sys.path.insert(0, parentPath)
+
 from Login.loginUI import Ui_Form
 from MainGUI.medicWorldGUI import Ui_MainGUI
 from PatientForm.newPatientGUI import Ui_NewPatient
@@ -17,6 +21,7 @@ from Frames.SuppliesFrame import SuppliesFrame
 from Frames.NewDrugForm import NewDrugForm
 
 from Model.ModelDB import ModelDB
+
 
 # Main class of the GUI that inherits the QWidget object and all its properties
 
@@ -76,7 +81,7 @@ class MainPage(qtw.QWidget, Ui_MainGUI):
         self.exitButton_2.clicked.connect(self.quitApp)
         self.suppliesFrame.newMedicineButton.clicked.connect(lambda: self.display(7))
         self.NewDrugForm.backButton.clicked.connect(lambda: self.display(3))
-        self.NewDrugForm.doneButton.clicked.connect(lambda :self.NewDrugForm.doneChecker(self.databaseConnector))
+        self.NewDrugForm.doneButton.clicked.connect(lambda: self.NewDrugForm.doneChecker(self.databaseConnector))
 
     def openNewPatient(self):
         self.patientWindow = qtw.QMainWindow()
@@ -109,7 +114,7 @@ class MainPage(qtw.QWidget, Ui_MainGUI):
         spacerCol = [1, 3, 5]
         self.SuppliesButtons = []
         drug = 0
-        for j in range(round(len(drugs)/3.0)+1):
+        for j in range(round(len(drugs) / 3.0) + 1):
             try:
                 for i in range(3):
                     hspacer = qtw.QSpacerItem(20, 10, qtw.QSizePolicy.Fixed)

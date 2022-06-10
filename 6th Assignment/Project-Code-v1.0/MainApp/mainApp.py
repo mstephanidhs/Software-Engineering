@@ -1,7 +1,7 @@
 import sys, os
 
 path = os.getcwd()
-parentPath = os.path.dirname(path) + "/MedicWorld"
+parentPath = os.path.dirname(path) + "/Project-Code-v1.0"
 sys.path.insert(0, parentPath)
 
 from Login.loginUI import Ui_Form

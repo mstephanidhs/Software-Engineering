@@ -38,6 +38,15 @@ class Drug:
         except TypeError:
             return False
 
+    @staticmethod
+    def checkCategory(drugCategory,connector):
+        drugCategories = connector.selectData("select distinct category from Medicine")
+        drugCategories = [x[0] for x in drugCategories]
+        if drugCategory not in drugCategories:
+            return True
+        return False
+
+
     def show(self):
         return self.category, self.name, self.quantity, self.min, self.med, self.low
 

@@ -45,10 +45,9 @@ class NewDrugForm(QtWidgets.QFrame, Ui_Frame):
 
 
         if self.checkRequiredFields():
-            drugCategories = connector.selectData("select distinct category from Medicine")
-            drugCategories = [x[0] for x in drugCategories]
-            if self.editMap["category"].text() not in drugCategories:
-                popMessage = MessageBox("The Category you have written will be inserted into the system.", "Information")
+            if Drug.checkCategory(self.editMap["category"].text(), connector):
+                popMessage = MessageBox("The Category you have written will be inserted into the system.",
+                                        "Information")
                 popMessage.createMessage()
             self.windowGUI = SuccessFrame(connector)
             self.windowGUI.setupUi(self.windowGUI)
@@ -61,7 +60,7 @@ class NewDrugForm(QtWidgets.QFrame, Ui_Frame):
 
 
     def checkRequiredFields(self):
-        regexNumber = re.compile(r'[0-9]+')
+        regexNumber = re.compile(r'[1-9][0-9]+')
         for edit in self.editMap.values():
             if len(edit.text()) == 0:
                 popMessage = MessageBox("Please fill all the required fields!", "Error")

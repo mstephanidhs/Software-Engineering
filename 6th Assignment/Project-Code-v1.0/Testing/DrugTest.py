@@ -6,6 +6,9 @@ from MainApp.DBPATH import DBPATH
 
 class DrugTest(unittest.TestCase):
 
+    def setUp(self):
+        self.db =ModelDB(DBPATH)
+
     def testInit(self):
         self.assertRaises(TypeError, Drug,"Ponstan", 123, 100,100,100, 100)
         drug = Drug("Ponstan", "Antibiotics", 100,100,100, 100)
@@ -34,11 +37,18 @@ class DrugTest(unittest.TestCase):
         self.assertFalse(Drug.quantitiesCheck([123]))
 
     def test_store(self):
-        db =ModelDB(DBPATH)
+
         drug1 = Drug("Antibiotics", "Ponstan", 100, 100, 100, 100)
         drug2 = Drug("Antibiotics", "Ponstan", 500, 100, 100, 100)
-        self.assertTrue(drug1.store(db))
-        self.assertTrue(drug2.store(db))
+        self.assertTrue(drug1.store(self.db))
+        self.assertTrue(drug2.store(self.db))
+
+
+    def test_checkCategory(self):
+        self.assertFalse(Drug.checkCategory("Antibiotics",self.db))
+        self.assertFalse(Drug.checkCategory("Antacids",self.db))
+        self.assertTrue(Drug.checkCategory("aasdf", self.db))
+        self.assertTrue(Drug.checkCategory("asd;asdf", self.db))
 
 if __name__ == '__main__':
     unittest.main()
